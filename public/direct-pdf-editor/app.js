@@ -3732,7 +3732,7 @@ function prewarmDocFonts() {
 
 function unpristine() {
   const es = state.editing;
-  if (!es?.pristine) return;
+    if (!es) return;
   es.pristine = false;
   es.el.classList.remove('pristine');
   renderPage();
