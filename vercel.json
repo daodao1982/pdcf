@@ -2,6 +2,10 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/direct-pdf-editor/index.html",
+      "destination": "/direct-pdf-editor/index/"
+    },
+    {
       "source": "/pdfjs-annotation-viewer/web/viewer.html",
       "destination": "/pdfjs-annotation-viewer/web/viewer/"
     },
@@ -25,19 +29,19 @@
       ]
     },
     {
-      "source": "/(.*)\\.@(js|css|mjs)",
+      "source": "/(.*)\.@(js|css|mjs)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*)\\.@(png|jpg|jpeg|gif|svg|webp|avif|ico|woff|woff2|ttf|eot)",
+      "source": "/(.*)\.@(png|jpg|jpeg|gif|svg|webp|avif|ico|woff|woff2|ttf|eot)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {
-      "source": "/(.*)\\.wasm",
+      "source": "/(.*)\.wasm",
       "headers": [
         { "key": "Content-Type", "value": "application/wasm" },
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
@@ -60,7 +64,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.mjs",
+      "source": "/(.*)\.mjs",
       "headers": [
         { "key": "Content-Type", "value": "application/javascript" }
       ]
